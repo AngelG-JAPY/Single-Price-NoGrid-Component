@@ -1,0 +1,133 @@
+:root {
+  /* Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 91%, 49%);
+  /* Neutral */
+  --Light-gray: hsl(204, 43%, 93%);
+  --Grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Light-gray);
+  font-size: 16px;
+  font-family: 'Karla';
+  font-weight: 700;
+}
+
+.container {
+  width: 340px;
+}
+
+.card {
+  padding: 1em 1.5em;
+}
+
+.card--gbc-white {
+  background-color: #fff;
+  border-radius: .5em .5em 0 0;
+}
+
+.card--gbc-cyan {
+  background-color: var(--Cyan);
+}
+
+.card--gbc-grayish-blue {
+  background-color: hsla(179 62% 43% / 0.7);
+  border-radius:  0 0 .5em .5em;
+}
+
+.card__title {
+  margin: 0.5em 0;
+  font-size: 1.3em;
+}
+
+.card__title--blue {
+  color: var(--Cyan);
+}
+
+.card__title--white,
+.price {
+  color: #fff;
+}
+
+.card__subtitle {
+  color: var(--bright-yellow);
+  margin-bottom: 1em;
+}
+
+.card__text {
+  margin-bottom: 1em;
+  color: var(--Light-gray);
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+.card__text--grayish-blue {
+  color: var(--Grayish-blue);
+}
+
+.card__price{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+.price{
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.price_desc{
+    color: var(--Light-gray);
+    opacity: .5;
+}
+
+.card__btn{
+    display: inline-block;
+    background-color: var(--bright-yellow);
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: .7em;
+    box-shadow: 0 5px 10px 5px  rgba(0 0 0 / .2);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card__text--width{
+    width: 200px
+}
+
+@media screen and (min-width: 768px) {
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 550px;
+    }
+
+    .card--inline{
+        width: 275px;
+        border-radius:  0 0 0 .5em;
+    }
+
+    .card--gbc-grayish-blue{
+        border-radius:  0  0 .5em 0;
+    }
+
+    .card__btn{
+        margin-top: 1.5em;
+    }
+}
+
+
